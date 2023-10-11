@@ -1,7 +1,4 @@
 #include "question1.h"
-#include<iostream>
-
-using std::cout;
 
 bool test_config()
 {
@@ -19,8 +16,8 @@ bool test_config()
 
 int strip_days_from_epoch(int seconds_since_1970)
 {
-    //Remove years, then months, then weeks, then days
-    //This is horribally inefficent, but I don't know what else to do
+    //Remove days until subtracting them would result in a negative number.
+    //This is horribally inefficent, but I don't have another solution
     while(seconds_since_1970 > 86400)
     {
        seconds_since_1970 -= 86400;
